@@ -38,21 +38,37 @@ class InterfaceController: WKInterfaceController
     }
     @IBAction func d20ButtonClicked()
     {
-        self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%20 + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
+        self.presentControllerWithName("tableScreen", context: "whatever")
+        
+        //self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%20 + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
     }
     @IBAction func d100ButtonClicked()
     {
-        self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%100 + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
+        self.pushControllerWithName("tableScreen", context: "Create a new roll")
+        
+        //self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%100 + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
     }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+        print("RootController:******\(context)")
         // Configure interface objects here.
+        let s = "2D6"
+
+        var ar = s.componentsSeparatedByString("D")
+        print(ar[0])
+        print(ar[1])
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if(DiceRollerCore.numSides != -1)
+        {
+            //Do something with the values
+            print("Num Sides: \(DiceRollerCore.numSides)")
+        
+            print("Num Dice: \(DiceRollerCore.numDice)")
+        }
     }
 
     override func didDeactivate() {

@@ -22,6 +22,9 @@ class pickerExampleIC: WKInterfaceController
     override func awakeWithContext(context: AnyObject?)
     {
         super.awakeWithContext(context)
+        print("******** \(context)");
+        
+        
         var thePickerItems = [WKPickerItem]()
         let labelNames = ["d4","d6","d8","d10","d12","d20","d100"]
         for(var i = 0; i < labelNames.count; i++)
@@ -38,7 +41,12 @@ class pickerExampleIC: WKInterfaceController
 
     @IBAction func whichOneButtonPressed()
     {
-        self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%Int32(sides[self.currSelectedIndex]) + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
+        //self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%Int32(sides[self.currSelectedIndex]) + 1)", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
+        //self.dismissController()
+        //self.popToRootController()
+        DiceRollerCore.numDice = self.currSelectedIndex
+        self.popToRootController()
+        
     }
     
     @IBAction func pickerWasClicked(value: Int)
