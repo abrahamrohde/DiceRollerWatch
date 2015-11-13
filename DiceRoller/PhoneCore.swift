@@ -10,6 +10,5 @@ import UIKit
 
 class PhoneCore: NSObject
 {
-    static var theRowData = [String]()
-    static var theTV : UITableView!
+    static var theRowData : [String]!
 }

@@ -103,7 +103,10 @@ class MainScreenIC: WKInterfaceController, WCSessionDelegate
         
         if(currMode == "Roll")
         {
-            self.presentAlertControllerWithTitle("The Roll", message: DiceRollerCore.theRolls[rowIndex].roll(), preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
+            let  rollString = DiceRollerCore.theRolls[rowIndex].roll()
+            self.presentAlertControllerWithTitle("The Roll", message: rollString, preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
+            
+            session.sendMessage(["aRoll": rollString], replyHandler: nil, errorHandler: nil)
 
         }
         else if(currMode == "Edit")
@@ -166,12 +169,12 @@ class MainScreenIC: WKInterfaceController, WCSessionDelegate
         })
         */
         
-        session.sendMessage(["blah\(self.count)":"\(self.count)"],replyHandler: nil, errorHandler: nil)
+        /*
         
         try! session.updateApplicationContext(["blah\(self.count)":"\(self.count)"])
         self.count++;
         //try! session.updateApplicationContext(["blah":"11"])
-        
+        */
         return nil
     }
 

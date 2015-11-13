@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class MainTVC: UIViewController, UITableViewDataSource, UITableViewDelegate
+class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITableViewDelegate
 {
-
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var session : WCSession!
     @IBOutlet weak var tv: UITableView!
     
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject])
+    {
+        PhoneCore.theRowData.append(message["aRoll"] as! String)
+        self.defaults.setObject(PhoneCore.theRowData, forKey: "theRolls")
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.tv.reloadData()
+        }
+        
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        PhoneCore.theTV = tv
+        var theRolls = self.defaults.objectForKey("theRolls")
+        if(theRolls == nil)
+        {
+            theRolls = [String]()
+            self.defaults.setObject(theRolls, forKey: "theRolls")
+        }
+        PhoneCore.theRowData = theRolls as! [String]
+        
+        if WCSession.isSupported() {
+            self.session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,10 +68,13 @@ class MainTVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         print("getting cell")
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! rollDetailCell
 
         // Configure the cell...
-        cell.textLabel?.text = PhoneCore.theRowData[indexPath.row]
+        let theParts = PhoneCore.theRowData[indexPath.row].componentsSeparatedByString("->")
+        cell.rollTotalLabel.text = theParts[1]
+        cell.rollDetailsTextView.text = theParts[0]
+        //cell.detailTextLabel?.text = theParts[0]
         return cell
     }
     
