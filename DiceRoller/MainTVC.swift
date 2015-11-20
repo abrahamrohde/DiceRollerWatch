@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import Parse
 
 class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITableViewDelegate
 {
@@ -28,7 +29,14 @@ class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITab
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject["name"] = "mike"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+        
         var theRolls = self.defaults.objectForKey("theRolls")
         if(theRolls == nil)
         {
@@ -73,7 +81,16 @@ class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITab
         // Configure the cell...
         let theParts = PhoneCore.theRowData[indexPath.row].componentsSeparatedByString("->")
         cell.rollTotalLabel.text = theParts[1]
-        cell.rollDetailsTextView.text = theParts[0]
+        let rtvc = storyboard?.instantiateViewControllerWithIdentifier("RollsTVC") as! RollsTVC
+        cell.rtvc = rtvc
+        cell.rollDetailsTV.dataSource = rtvc
+        cell.rollDetailsTV.delegate = rtvc
+        print(theParts[0])
+        var rollString = theParts[0].substringFromIndex(theParts[0].startIndex.advancedBy(1))
+        rollString = rollString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        rollString = rollString.substringToIndex(rollString.endIndex.predecessor())
+        rtvc.theRolls = rollString.componentsSeparatedByString(" ")
+        
         //cell.detailTextLabel?.text = theParts[0]
         return cell
     }

@@ -11,7 +11,9 @@ import UIKit
 class rollDetailCell: UITableViewCell {
     @IBOutlet weak var rollTotalLabel: UILabel!
 
-    @IBOutlet weak var rollDetailsTextView: UITextView!
+    @IBOutlet weak var rollDetailsTV: UITableView!
+    var rtvc : RollsTVC!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
