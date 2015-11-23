@@ -12,6 +12,7 @@ import Parse
 class RegisterVC: UIViewController
 {
 
+    @IBOutlet weak var theSpinner: UIActivityIndicatorView!
     @IBOutlet weak var usernameTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
@@ -56,19 +57,34 @@ class RegisterVC: UIViewController
         if(message.characters.count != 0)
         {
             //there was a problem
-            let av = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(av, animated: true, completion: { () -> Void in
-                let delay = 2 * Double(NSEC_PER_SEC)
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                })
-            })
+            PhoneCore.showAlert("Register Error", message: message, presentingViewController: self, onScreenDelay: 2)
         }
         else
         {
             //register the user
-            //see: https://www.parse.com/docs/ios/guide#users-signing-up
+            let user = PFUser()
+            user.username = self.usernameTF.text
+            user.password = self.passwordTF.text
+            user.email = self.emailTF.text
+            
+            //non blocking asyc call
+            self.theSpinner.startAnimating()
+            
+            user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                if(success)
+                {
+                    //user is registered, do what now?
+                    self.theSpinner.stopAnimating()
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                else
+                {
+                    //there was a problem
+                    print(error?.userInfo["error"])
+                }
+            })
+            
+            
         }
     }
     

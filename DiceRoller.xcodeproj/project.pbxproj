@@ -48,6 +48,7 @@
 		68B012001BFA73ED00D5DA54 /* RollsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B011FF1BFA73ED00D5DA54 /* RollsTVC.swift */; };
 		68D4EE3A1BFFBABE0003E3B2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */; };
 		68D4EE3C1BFFBD310003E3B2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */; };
+		68D4EE3E1C03B3F40003E3B2 /* UserHomepageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE3D1C03B3F40003E3B2 /* UserHomepageVC.swift */; };
 		CE64BD1BBEC82AE0F9AB6E6D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2052FA65CA45B0CC1BD3C8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		68B011FF1BFA73ED00D5DA54 /* RollsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsTVC.swift; sourceTree = "<group>"; };
 		68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		68D4EE3D1C03B3F40003E3B2 /* UserHomepageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomepageVC.swift; sourceTree = "<group>"; };
 		6A2052FA65CA45B0CC1BD3C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C238ECD8D753CC113BFC5B3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,6 +257,7 @@
 				68A764601BB5D9260007B18A /* AppDelegate.swift */,
 				68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */,
 				68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */,
+				68D4EE3D1C03B3F40003E3B2 /* UserHomepageVC.swift */,
 				68A764641BB5D9260007B18A /* Main.storyboard */,
 				68A764671BB5D9260007B18A /* Assets.xcassets */,
 				68A764691BB5D9260007B18A /* LaunchScreen.storyboard */,
@@ -515,6 +518,7 @@
 				68D4EE3A1BFFBABE0003E3B2 /* LoginVC.swift in Sources */,
 				68B012001BFA73ED00D5DA54 /* RollsTVC.swift in Sources */,
 				68D4EE3C1BFFBD310003E3B2 /* RegisterVC.swift in Sources */,
+				68D4EE3E1C03B3F40003E3B2 /* UserHomepageVC.swift in Sources */,
 				68A764611BB5D9260007B18A /* AppDelegate.swift in Sources */,
 				68B011FE1BF6848600D5DA54 /* rollDetailCell.swift in Sources */,
 			);
