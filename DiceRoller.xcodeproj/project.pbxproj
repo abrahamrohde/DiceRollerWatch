@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68679BDE1C0CE6B0005D78E4 /* customRollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68679BDD1C0CE6B0005D78E4 /* customRollCell.swift */; };
 		68935DA01BB9CD890042795F /* d20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 68935D9F1BB9CD890042795F /* d20.jpeg */; };
 		68935DA21BB9CE400042795F /* diceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68935DA11BB9CE400042795F /* diceRow.swift */; };
 		68935DA41BB9CEED0042795F /* tableExampleIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68935DA31BB9CEED0042795F /* tableExampleIC.swift */; };
@@ -42,10 +43,7 @@
 		68A764881BB5D9260007B18A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A764871BB5D9260007B18A /* ExtensionDelegate.swift */; };
 		68A7648A1BB5D9260007B18A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A764891BB5D9260007B18A /* NotificationController.swift */; };
 		68A7648C1BB5D9260007B18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A7648B1BB5D9260007B18A /* Assets.xcassets */; };
-		68B011F61BF3D93B00D5DA54 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B011F51BF3D93B00D5DA54 /* MainTVC.swift */; };
 		68B011FA1BF3E1FF00D5DA54 /* PhoneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B011F91BF3E1FF00D5DA54 /* PhoneCore.swift */; };
-		68B011FE1BF6848600D5DA54 /* rollDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B011FD1BF6848600D5DA54 /* rollDetailCell.swift */; };
-		68B012001BFA73ED00D5DA54 /* RollsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B011FF1BFA73ED00D5DA54 /* RollsTVC.swift */; };
 		68D4EE3A1BFFBABE0003E3B2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */; };
 		68D4EE3C1BFFBD310003E3B2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */; };
 		68D4EE3E1C03B3F40003E3B2 /* UserHomepageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4EE3D1C03B3F40003E3B2 /* UserHomepageVC.swift */; };
@@ -96,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		15AA2F34AF982F60E7F0E3A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		68679BDD1C0CE6B0005D78E4 /* customRollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customRollCell.swift; sourceTree = "<group>"; };
 		68935D9F1BB9CD890042795F /* d20.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d20.jpeg; sourceTree = "<group>"; };
 		68935DA11BB9CE400042795F /* diceRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diceRow.swift; sourceTree = "<group>"; };
 		68935DA31BB9CEED0042795F /* tableExampleIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableExampleIC.swift; sourceTree = "<group>"; };
@@ -130,13 +129,12 @@
 		68A764891BB5D9260007B18A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		68A7648B1BB5D9260007B18A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68A7648D1BB5D9260007B18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68B011F51BF3D93B00D5DA54 /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		68B011F91BF3E1FF00D5DA54 /* PhoneCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCore.swift; sourceTree = "<group>"; };
-		68B011FD1BF6848600D5DA54 /* rollDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rollDetailCell.swift; sourceTree = "<group>"; };
-		68B011FF1BFA73ED00D5DA54 /* RollsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsTVC.swift; sourceTree = "<group>"; };
 		68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		68D4EE3D1C03B3F40003E3B2 /* UserHomepageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomepageVC.swift; sourceTree = "<group>"; };
+		68D4EE3F1C0654FF0003E3B2 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		68D4EE411C0655330003E3B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse.framework"; sourceTree = "<group>"; };
 		6A2052FA65CA45B0CC1BD3C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C238ECD8D753CC113BFC5B3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +252,7 @@
 		68A7645F1BB5D9260007B18A /* DiceRoller */ = {
 			isa = PBXGroup;
 			children = (
+				68679BDD1C0CE6B0005D78E4 /* customRollCell.swift */,
 				68A764601BB5D9260007B18A /* AppDelegate.swift */,
 				68D4EE391BFFBABE0003E3B2 /* LoginVC.swift */,
 				68D4EE3B1BFFBD310003E3B2 /* RegisterVC.swift */,
@@ -262,10 +261,7 @@
 				68A764671BB5D9260007B18A /* Assets.xcassets */,
 				68A764691BB5D9260007B18A /* LaunchScreen.storyboard */,
 				68A7646C1BB5D9260007B18A /* Info.plist */,
-				68B011F51BF3D93B00D5DA54 /* MainTVC.swift */,
 				68B011F91BF3E1FF00D5DA54 /* PhoneCore.swift */,
-				68B011FD1BF6848600D5DA54 /* rollDetailCell.swift */,
-				68B011FF1BFA73ED00D5DA54 /* RollsTVC.swift */,
 			);
 			path = DiceRoller;
 			sourceTree = "<group>";
@@ -309,6 +305,8 @@
 		AEE669356209D274B2A22ED5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68D4EE411C0655330003E3B2 /* Parse.framework */,
+				68D4EE3F1C0654FF0003E3B2 /* Pods.framework */,
 				6A2052FA65CA45B0CC1BD3C8 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -513,14 +511,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B011F61BF3D93B00D5DA54 /* MainTVC.swift in Sources */,
 				68B011FA1BF3E1FF00D5DA54 /* PhoneCore.swift in Sources */,
 				68D4EE3A1BFFBABE0003E3B2 /* LoginVC.swift in Sources */,
-				68B012001BFA73ED00D5DA54 /* RollsTVC.swift in Sources */,
 				68D4EE3C1BFFBD310003E3B2 /* RegisterVC.swift in Sources */,
+				68679BDE1C0CE6B0005D78E4 /* customRollCell.swift in Sources */,
 				68D4EE3E1C03B3F40003E3B2 /* UserHomepageVC.swift in Sources */,
 				68A764611BB5D9260007B18A /* AppDelegate.swift in Sources */,
-				68B011FE1BF6848600D5DA54 /* rollDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +670,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "DiceRoller WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.awesomefat.DiceRoller.watchkitapp.watchkitextension;
@@ -691,6 +691,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "DiceRoller WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.awesomefat.DiceRoller.watchkitapp.watchkitextension;

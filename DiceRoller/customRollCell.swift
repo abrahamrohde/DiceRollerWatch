@@ -1,19 +1,18 @@
 //
-//  rollDetailCell.swift
+//  customRollCell.swift
 //  DiceRoller
 //
-//  Created by Michael Litman on 11/13/15.
+//  Created by Michael Litman on 11/30/15.
 //  Copyright © 2015 awesomefat. All rights reserved.
 //
 
 import UIKit
 
-class rollDetailCell: UITableViewCell {
-    @IBOutlet weak var rollTotalLabel: UILabel!
-
-    @IBOutlet weak var rollDetailsTV: UITableView!
-    var rtvc : RollsTVC!
-    
+class customRollCell: UITableViewCell
+{
+    @IBOutlet weak var qtyLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var sidesLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
