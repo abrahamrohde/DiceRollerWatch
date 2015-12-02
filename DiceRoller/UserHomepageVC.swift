@@ -81,9 +81,13 @@ class UserHomepageVC: UIViewController, WCSessionDelegate, UITableViewDataSource
     
         // Configure the cell...
         //update this code to fill the labels with the proper values
-        cell.sidesLabel.text = "blah sides"
-        cell.qtyLabel.text = "some qty"
-        cell.detailLabel.text = "woot"
+        
+        cell.detailLabel.text = "\(PhoneCore.theRowData[indexPath.row]["total"]) -> \(PhoneCore.theRowData[indexPath.row]["details"] as? String)"
+        
+        
+        //cell.sidesLabel.text = "blah sides"
+        //cell.qtyLabel.text = "some qty"
+        //cell.detailLabel.text = "woot"
         return cell
     }
     
